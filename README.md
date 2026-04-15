@@ -49,5 +49,6 @@ Received & decrypted by other clients
 
 ---
 ### 📸 Screenshots
+<img width="996" height="640" alt="image" src="https://github.com/user-attachments/assets/40ab866a-21be-4e8e-8661-c969c8433b7b" />
 
 ---
