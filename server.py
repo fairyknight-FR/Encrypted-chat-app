@@ -24,7 +24,6 @@ def handle_client(client_socket, addr):
             if not data:
                 break
 
-            # Log encrypted message
             with open("chat.log", "a") as f:
                 f.write(data.hex() + "\n")
 
@@ -32,7 +31,7 @@ def handle_client(client_socket, addr):
                 decrypted = decrypt_message(data)
                 print(f"[{addr}] {decrypted}")
             except:
-                print(f"[{addr}] (Decryption Failed)")
+                print(f"[{addr}] (Decrypt Failed)")
 
             broadcast(data, client_socket)
 
@@ -48,7 +47,7 @@ def start_server():
     server.bind((HOST, PORT))
     server.listen()
 
-    print(f"[+] Server listening on {HOST}:{PORT}")
+    print(f"[+] Server running on {HOST}:{PORT}")
 
     while True:
         client_socket, addr = server.accept()
